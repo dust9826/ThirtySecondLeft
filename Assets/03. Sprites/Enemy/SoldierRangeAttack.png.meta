@@ -81,7 +81,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 48
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -133,12 +133,12 @@ TextureImporter:
       name: SoldierRangeAttack_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 5
-        width: 97
-        height: 123
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: SoldierRangeAttack_1
       rect:
         serializedVersion: 2
-        x: 179
-        y: 4
-        width: 106
-        height: 122
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -177,12 +177,12 @@ TextureImporter:
       name: SoldierRangeAttack_2
       rect:
         serializedVersion: 2
-        x: 339
-        y: 5
-        width: 123
-        height: 123
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -199,12 +199,12 @@ TextureImporter:
       name: SoldierRangeAttack_3
       rect:
         serializedVersion: 2
-        x: 505
-        y: 5
-        width: 100
-        height: 123
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -217,165 +217,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: SoldierRangeAttack_4
-      rect:
-        serializedVersion: 2
-        x: 590
-        y: 104
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c34466279091049f0800000000000000
-      internalID: -486361231391308740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SoldierRangeAttack_5
-      rect:
-        serializedVersion: 2
-        x: 610
-        y: 91
-        width: 20
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 663c269366fdadc60800000000000000
-      internalID: 7843827331161572198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SoldierRangeAttack_6
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 69
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 832eee70762cdf460800000000000000
-      internalID: 7277186320671105592
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SoldierRangeAttack_7
-      rect:
-        serializedVersion: 2
-        x: 590
-        y: 72
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9d1e73115b13809d0800000000000000
-      internalID: -2807939713917787687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SoldierRangeAttack_8
-      rect:
-        serializedVersion: 2
-        x: 177
-        y: 59
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e702fa68d18943720800000000000000
-      internalID: 2825050118849241214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SoldierRangeAttack_9
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 3
-        width: 10
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b65348bfbcca79bc0800000000000000
-      internalID: -3776359770428787349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SoldierRangeAttack_10
-      rect:
-        serializedVersion: 2
-        x: 391
-        y: 4
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ae1d67f2a764ddb40800000000000000
-      internalID: 5466603013293920746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9c638e174756fc24c804682d2cd3364d
     internalID: 0
     vertices: []
     indices: 
@@ -383,19 +229,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       SoldierRangeAttack_0: -5220885959185704354
       SoldierRangeAttack_1: 2461163175479880902
-      SoldierRangeAttack_10: 5466603013293920746
       SoldierRangeAttack_2: 2355910077978190725
       SoldierRangeAttack_3: -3433620038168132574
-      SoldierRangeAttack_4: -486361231391308740
-      SoldierRangeAttack_5: 7843827331161572198
-      SoldierRangeAttack_6: 7277186320671105592
-      SoldierRangeAttack_7: -2807939713917787687
-      SoldierRangeAttack_8: 2825050118849241214
-      SoldierRangeAttack_9: -3776359770428787349
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
