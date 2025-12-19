@@ -591,6 +591,7 @@ GameObject:
   - component: {fileID: 361470169}
   - component: {fileID: 361470171}
   - component: {fileID: 361470168}
+  - component: {fileID: 361470173}
   - component: {fileID: 361470167}
   - component: {fileID: 361470165}
   - component: {fileID: 361470172}
@@ -802,6 +803,84 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &361470173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361470164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db2a7a379571184fa048b6d19ea7a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodSystem.BloodEmitter
+  bloodVFXPrefab: {fileID: 3320725074296241809, guid: 859af7d65d7b22049a1729c73fa8d57d, type: 3}
+  immediateSplatSize: 0.5
+  rayCount: 10
+  raycastSplatSize: 0.3
+  raycastLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  minRayDistance: 0.1
+  maxRayDistance: 2
+--- !u!1001 &420306468
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6351498516556587235, guid: 22687721efc422e4caf9e6e986f141a0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.92353
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351498516556587235, guid: 22687721efc422e4caf9e6e986f141a0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.12178
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351498516556587235, guid: 22687721efc422e4caf9e6e986f141a0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351498516556587235, guid: 22687721efc422e4caf9e6e986f141a0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351498516556587235, guid: 22687721efc422e4caf9e6e986f141a0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351498516556587235, guid: 22687721efc422e4caf9e6e986f141a0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351498516556587235, guid: 22687721efc422e4caf9e6e986f141a0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351498516556587235, guid: 22687721efc422e4caf9e6e986f141a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351498516556587235, guid: 22687721efc422e4caf9e6e986f141a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351498516556587235, guid: 22687721efc422e4caf9e6e986f141a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012989718165155418, guid: 22687721efc422e4caf9e6e986f141a0, type: 3}
+      propertyPath: m_Name
+      value: BloodManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 22687721efc422e4caf9e6e986f141a0, type: 3}
 --- !u!1 &438928864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1245,7 @@ GameObject:
   - component: {fileID: 1237020308}
   - component: {fileID: 1237020314}
   - component: {fileID: 1237020312}
+  - component: {fileID: 1237020316}
   - component: {fileID: 1237020310}
   - component: {fileID: 1237020313}
   - component: {fileID: 1237020315}
@@ -1377,6 +1457,27 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &1237020316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237020306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db2a7a379571184fa048b6d19ea7a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodSystem.BloodEmitter
+  bloodVFXPrefab: {fileID: 3320725074296241809, guid: 859af7d65d7b22049a1729c73fa8d57d, type: 3}
+  immediateSplatSize: 0.5
+  rayCount: 10
+  raycastSplatSize: 0.3
+  raycastLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  minRayDistance: 0.1
+  maxRayDistance: 2
 --- !u!1 &1274391932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3620,3 +3721,4 @@ SceneRoots:
   - {fileID: 6016947320115096541}
   - {fileID: 1237020309}
   - {fileID: 361470170}
+  - {fileID: 420306468}
