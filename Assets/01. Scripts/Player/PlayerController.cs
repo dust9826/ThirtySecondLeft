@@ -46,6 +46,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        
+        if (isGrounded)
+        {
+            isKnockback = false;
+        }
     }
 
     void FixedUpdate()
