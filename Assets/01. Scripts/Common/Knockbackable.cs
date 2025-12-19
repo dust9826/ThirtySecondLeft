@@ -1,3 +1,4 @@
+using BloodSystem;
 using UnityEngine;
 
 public class Knockbackable : MonoBehaviour
@@ -48,7 +49,7 @@ public class Knockbackable : MonoBehaviour
         {
             if (mySpeed >= minSpeedToExplode)
             {
-                Explode();
+                Explode(collision);
             }
             return;
         }
@@ -61,13 +62,21 @@ public class Knockbackable : MonoBehaviour
 
         if (mySpeed >= minSpeedToExplode || otherSpeed >= minSpeedToExplode)
         {
-            knockback.Explode();
-            Explode();
+            knockback.Explode(collision);
+            Explode(collision);
         }
     }
 
-    public void Explode()
+    public void Explode(Collision2D collision)
     {
+        
+        BloodEmitter emitter = GetComponent<BloodEmitter>();
+        if (emitter != null)
+        {
+            // 방법 1: Collision2D 직접 전달
+            emitter.EmitFromCollision(collision);
+        }
+
         Destroy(gameObject);
     }
 }
