@@ -11,7 +11,10 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
-    
+
+    [Header("Knockback")]
+    public float knockbackThreshold = 0.5f;
+
     private Animator animator;
     private Rigidbody2D rb;
     private float moveX;
@@ -46,8 +49,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        
-        if (isGrounded)
+
+        // 속도가 임계값 이하로 떨어지면 넉백 해제
+        if (isKnockback && rb.linearVelocity.magnitude <= knockbackThreshold)
         {
             isKnockback = false;
         }

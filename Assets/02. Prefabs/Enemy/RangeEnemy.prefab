@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2c982083b8a4b14a8265d8750cf6a32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Knockbackable
-  minSpeedToExplode: 5
+  minSpeedToExplode: 3
   wallLayer:
     serializedVersion: 2
     m_Bits: 2048

@@ -118,8 +118,7 @@ public class PlayerKick : MonoBehaviour
                 knockbackable.ApplyKnockback(kickDirection, kickForce);
             }
         }
-
-        // enemyLayer 오브젝트를 킥했다면 플레이어도 반대로 날아감
+        
         if (hitEnemies.Length > 0)
         {
             if (playerController != null)
