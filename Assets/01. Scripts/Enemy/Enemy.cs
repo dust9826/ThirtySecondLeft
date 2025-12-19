@@ -36,23 +36,35 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        // 넉백 상태 확인 (밀리기만 해도 true라고 가정)
         bool isKnockBack = knockbackable != null && knockbackable.IsKnockBack;
+        animator.SetBool("IsKnockback", isKnockBack);
 
-        // 공격 중이 아니고, 넉백 중이 아닐 때만 로직 실행
-        if (!isKnockBack && !isAttacking)
+        if (isKnockBack)
+        {
+            // 1순위: 넉백 중이면 진행 중인 공격 코루틴을 강제 종료
+            if (isAttacking)
+            {
+                StopAllCoroutines(); 
+                isAttacking = false;
+            }
+            return; // 넉백 중에는 아래의 이동/공격 로직을 아예 실행하지 않음
+        }
+
+        // 2순위 & 3순위 로직
+        if (!isAttacking)
         {
             DetectPlayer();
-
             if (target != null)
             {
-                if (isPlayerInAttackRange)
-                {
-                    TryAttack();
-                }
-                else if (isPlayerInRange)
-                {
-                    FollowPlayer();
-                }
+                if (isPlayerInAttackRange) TryAttack();
+                else if (isPlayerInRange) FollowPlayer();
+            }
+            else
+            {
+                // 타겟이 없으면 멈춤
+                animator.SetBool("IsRun", false);
+                rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             }
         }
     }
@@ -99,23 +111,29 @@ public class Enemy : MonoBehaviour
     IEnumerator AttackRoutine()
     {
         isAttacking = true;
-        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y); // 정지
+    
+        // 1. 확실하게 멈추기
+        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         animator.SetBool("IsRun", false);
+    
+        // 2. 공격 애니메이션 시작 (여기서 딱 한 번만 호출)
         animator.SetTrigger("IsAttack");
 
-        // 실제 발사체 생성 (애니메이션 타이밍에 맞추고 싶다면 중간에 대기 추가)
-        Attack();
+        // 3. 선딜레이: 애니메이션에서 무기를 휘두르는 타이밍까지 대기 (예: 0.3초)
+        yield return new WaitForSeconds(0.3f); 
 
-        // 애니메이션이 끝날 때까지 대기 (예: 0.5초 또는 애니메이션 길이만큼)
-        // 혹은 특정 시간 뒤에 다시 움직일 수 있게 함
-        yield return new WaitForSeconds(0.8f); 
+        // 4. 실제 발사체 생성 함수 호출 (내부에 트리거 제거됨)
+        SpawnProjectile();
+
+        // 5. 후딜레이: 공격 동작이 마무리될 때까지 대기
+        yield return new WaitForSeconds(0.5f); 
 
         isAttacking = false;
     }
-    void Attack()
+
+    void SpawnProjectile() // 기존 Attack 함수 수정
     {
-        animator.SetTrigger("IsAttack");
-        if (projectilePrefab != null && firePoint != null)
+        if (projectilePrefab != null && firePoint != null && target != null)
         {
             GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
             Vector2 shootDir = (target.position - firePoint.position).normalized;
