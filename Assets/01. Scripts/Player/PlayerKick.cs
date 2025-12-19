@@ -12,13 +12,11 @@ public class PlayerKick : MonoBehaviour
     private Camera cam;
 
     [Header("Settings")] 
-    public bool canKick = true;
     public float maxDragDistance = 3f;
     public float kickForce = 15f;      // 발차기 피격된 적에게 주는 힘
     public float recoilForce = 10f;    // 플레이어가 반동으로 밀려나는 힘
     public float kickRadius = 1.5f;    // 발차기 피격 범위
-    public float knockbackDuration = 0.5f; // 넉백 지속 시간(반동으로 밀려나는 동안 움직이지못함)
-    public LayerMask enemyLayer;       // 적 레이어
+    public LayerMask kickableLayer;       // 적 레이어
     public float arrowOffsetDistance = 2f; // 화살표를 플레이어 중앙에서 2f 떨어진 곳에 배치
 
     private PlayerController playerController;
@@ -71,7 +69,7 @@ public class PlayerKick : MonoBehaviour
         isDragging = true;
         if (arrowSpriteRenderer != null)
         {
-            arrowSpriteRenderer.enabled = true; // 드래그 시작 시 화살표 활성화
+            arrowSpriteRenderer.enabled = true;
         }
     }
 
@@ -103,30 +101,27 @@ public class PlayerKick : MonoBehaviour
         {
             arrowSpriteRenderer.enabled = false; // 드래그 종료 시 화살표 비활성화
         }
+
         PerformKick();
     }
 
     void PerformKick()
     {
-        canKick = false;
         animator.SetTrigger("doKick");
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(kickPoint.position, kickRadius, enemyLayer);
-        bool hitSomething = false;
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(kickPoint.position, kickRadius, kickableLayer);
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            Rigidbody2D enemyRb = enemy.GetComponent<Rigidbody2D>();
-            if (enemyRb != null)
+            Knockbackable knockbackable = enemy.GetComponent<Knockbackable>();
+            if (knockbackable != null)
             {
-                enemyRb.linearVelocity = Vector2.zero;
-                enemyRb.AddForce(kickDirection * kickForce, ForceMode2D.Impulse);
-                hitSomething = true;
+                knockbackable.ApplyKnockback(kickDirection, kickForce);
             }
         }
 
-        if (hitSomething)
+        // enemyLayer 오브젝트를 킥했다면 플레이어도 반대로 날아감
+        if (hitEnemies.Length > 0)
         {
-            canKick = true;
             if (playerController != null)
             {
                 playerController.isKnockback = true;
@@ -134,17 +129,6 @@ public class PlayerKick : MonoBehaviour
 
             rb.linearVelocity = Vector2.zero;
             rb.linearVelocity = -kickDirection * recoilForce;
-
-            StartCoroutine(ResetKnockback());
-        }
-    }
-
-    IEnumerator ResetKnockback()
-    {
-        yield return new WaitForSeconds(knockbackDuration);
-        if (playerController != null)
-        {
-            playerController.isKnockback = false;
         }
     }
 }
