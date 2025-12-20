@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6351498516556587235}
   - component: {fileID: 2276716828469834227}
+  - component: {fileID: 5964303842797606895}
   m_Layer: 0
   m_Name: BloodManager
   m_TagString: Untagged
@@ -54,4 +55,28 @@ MonoBehaviour:
   splatParents: {fileID: 6351498516556587235}
   bloodColorMin: {r: 1, g: 0, b: 0, a: 1}
   bloodColorMax: {r: 1, g: 0, b: 0, a: 1}
-  maxSplatCount: 100
+  maxSplatCount: 200
+--- !u!114 &5964303842797606895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012989718165155418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc151a8c13da40a44bb74f54f84e9823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodSystem.GoreSpawner
+  gorePiecePrefabs:
+  - {fileID: 8628697529619461155, guid: 2d73fa3c4dbdc51498947f7c8d5f6d3d, type: 3}
+  bloodBurstPrefab: {fileID: 8016841967455972420, guid: 859af7d65d7b22049a1729c73fa8d57d, type: 3}
+  minPieces: 2
+  maxPieces: 3
+  spawnOffset: 0.3
+  forceRange: {x: 0.02, y: 0.05}
+  torqueRange: {x: -60, y: 60}
+  spreadAngle: 120
+  mainSplatterCount: 2
+  mainSplatterSize: {x: 1.5, y: 2.5}
+  goreParent: {fileID: 6351498516556587235}

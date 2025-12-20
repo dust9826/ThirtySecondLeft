@@ -75,6 +75,7 @@ public class Knockbackable : MonoBehaviour
         {
             // 방법 1: Collision2D 직접 전달
             emitter.EmitFromCollision(collision);
+            GoreSpawner.Instance.Spawn((collision));
         }
 
         Destroy(gameObject);
