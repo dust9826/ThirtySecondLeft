@@ -24,6 +24,13 @@ public class PlayerKick : MonoBehaviour
     private bool isDragging = false;
     private Vector3 kickDirection;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip airKickClip;
+    public float airKickSensity = 1.0f;
+    public AudioClip hitKickClip;
+    public float hitKickSensity = 1.0f;
+    
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -128,6 +135,13 @@ public class PlayerKick : MonoBehaviour
 
             rb.linearVelocity = Vector2.zero;
             rb.linearVelocity = -kickDirection * recoilForce;
+            audioSource.PlayOneShot(hitKickClip);
+            audioSource.volume = hitKickSensity;
+        }
+        else
+        {
+            audioSource.PlayOneShot(airKickClip);
+            audioSource.volume = airKickSensity;
         }
     }
 }

@@ -10,6 +10,12 @@ public class Knockbackable : MonoBehaviour
     [Header("Knockback Settings")]
     public float knockbackThreshold = 0.5f;
 
+    [Header("Crash Audio")] 
+    public AudioClip crashClip;
+
+    public float crashSensity;
+    private AudioSource playerAudio;
+    
     private Rigidbody2D rb;
     private bool isKnockBack;
 
@@ -18,6 +24,12 @@ public class Knockbackable : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Start()
+    {
+        playerAudio = GameObject.FindWithTag("Player")
+            .GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -76,6 +88,8 @@ public class Knockbackable : MonoBehaviour
             // 방법 1: Collision2D 직접 전달
             emitter.EmitFromCollision(collision);
             GoreSpawner.Instance.Spawn((collision));
+            playerAudio.PlayOneShot(crashClip);
+            playerAudio.volume = crashSensity;
         }
 
         Destroy(gameObject);
