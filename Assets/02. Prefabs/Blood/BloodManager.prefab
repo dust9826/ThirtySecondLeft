@@ -44,9 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6256e511dab7a0f458fb3d92c2074021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BloodSystem.BloodManager
-  splatTextures:
-  - {fileID: 2800000, guid: 442a46ddd29334a478579c1ed6bdf93b, type: 3}
-  - {fileID: 2800000, guid: 378a390eb755f1340bdc57ff44e8ccae, type: 3}
-  - {fileID: 2800000, guid: 75ef724202282004d883ec6f7a0be449, type: 3}
-  - {fileID: 2800000, guid: 38d08405cf9fbd74ebca1b29cfd0e10d, type: 3}
-  splatBlitShader: {fileID: 10755, guid: 0000000000000000e000000000000000, type: 0}
+  splatPrefabs:
+  - {fileID: 2110125582095308669, guid: 1e991cc47dcdc624aad9e7b10b93b4d2, type: 3}
+  - {fileID: 3355176403115942378, guid: ebb815d900b56fd439ecd44ac9acd672, type: 3}
+  - {fileID: 7716174562736985590, guid: 8de21a3427cbf4c4680112b6c4713406, type: 3}
+  - {fileID: 7472697752316912469, guid: eded53633bf697341aa9585e455ecfb1, type: 3}
+  - {fileID: 7842190788515281666, guid: 02d3fef6bd8f0b541b40d4b1d55469a5, type: 3}
+  - {fileID: 4102029799433922255, guid: 0bfa64f14d0eb30409ddffa6166b9ba9, type: 3}
+  splatParents: {fileID: 6351498516556587235}
+  bloodColorMin: {r: 1, g: 0, b: 0, a: 1}
+  bloodColorMax: {r: 1, g: 0, b: 0, a: 1}
+  maxSplatCount: 100

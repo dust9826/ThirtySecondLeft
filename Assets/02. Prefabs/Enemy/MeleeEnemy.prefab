@@ -152,13 +152,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BloodSystem.BloodEmitter
   bloodVFXPrefab: {fileID: 3320725074296241809, guid: 859af7d65d7b22049a1729c73fa8d57d, type: 3}
   immediateSplatSize: 0.5
-  rayCount: 10
+  rayCount: 5
   raycastSplatSize: 0.3
   raycastLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  minRayDistance: 0.1
-  maxRayDistance: 2
+  minRayDistance: 3
+  maxRayDistance: 4
 --- !u!95 &6752532052654840496
 Animator:
   serializedVersion: 7
