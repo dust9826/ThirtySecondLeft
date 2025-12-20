@@ -5051,6 +5051,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeleeEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3778283822245792875, guid: 4b95afc627c3a2c498dd7995fb268eb8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5645580797908515866, guid: 4b95afc627c3a2c498dd7995fb268eb8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9782,7 +9786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1713387794139620834
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -46,9 +46,16 @@ public class Knockbackable : MonoBehaviour
     public void ApplyKnockback(Vector2 direction, float force)
     {
         if (rb == null) return;
-
+        
         rb.linearVelocity = Vector2.zero;
-        rb.AddForce(direction * force, ForceMode2D.Impulse);
+        if (rb.bodyType == RigidbodyType2D.Dynamic)
+        {
+            rb.AddForce(direction * force, ForceMode2D.Impulse);
+        }
+        else
+        {
+            rb.linearVelocity = direction * force;
+        }
         isKnockBack = true;
     }
     
@@ -79,15 +86,50 @@ public class Knockbackable : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag.Equals("Bullet"))
+        {
+            float mySpeed = rb.linearVelocity.magnitude;
+
+            // 다른 Knockbackable과 충돌 시
+            Knockbackable knockback = other.gameObject.GetComponent<Knockbackable>();
+            if (knockback == null) return;
+            if (!knockback.isKnockBack) return;
+            
+            float otherSpeed = knockback.rb.linearVelocity.magnitude;
+
+            if (mySpeed >= minSpeedToExplode || otherSpeed >= minSpeedToExplode)
+            {
+                knockback.Explode(other);
+                Explode(other);
+            }
+        }
+    }
+
     public void Explode(Collision2D collision)
     {
-        
         BloodEmitter emitter = GetComponent<BloodEmitter>();
         if (emitter != null)
         {
             // 방법 1: Collision2D 직접 전달
             emitter.EmitFromCollision(collision);
-            GoreSpawner.Instance.Spawn((collision));
+            GoreSpawner.Instance.Spawn(collision);
+            playerAudio.PlayOneShot(crashClip);
+            playerAudio.volume = crashSensity;
+        }
+
+        Destroy(gameObject);
+    }
+
+    public void Explode(Collider2D collider)
+    {
+        BloodEmitter emitter = GetComponent<BloodEmitter>();
+        if (emitter != null)
+        {
+            // 방법 1: Collision2D 직접 전달
+            emitter.Emit(this.transform.position, Vector2.zero);
+            GoreSpawner.Instance.Spawn(transform.position, Vector2.zero);
             playerAudio.PlayOneShot(crashClip);
             playerAudio.volume = crashSensity;
         }
