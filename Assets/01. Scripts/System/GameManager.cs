@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        // 싱글톤 설정
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -22,7 +23,7 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
-        
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Update()
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         
         string currentSceneName = SceneManager.GetActiveScene().name;
+        gameoverPanel.SetActive(false);
         SceneManager.LoadScene(currentSceneName);
     }
 }

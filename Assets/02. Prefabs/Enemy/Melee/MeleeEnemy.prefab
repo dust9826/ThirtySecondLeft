@@ -115,6 +115,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   knockbackThreshold: 0.5
+  crashClip: {fileID: 8300000, guid: 9653bf85b131f0b42918a46e708e5bd5, type: 3}
+  crashSensity: 0.12
 --- !u!114 &1230794505209471789
 MonoBehaviour:
   m_ObjectHideFlags: 0
