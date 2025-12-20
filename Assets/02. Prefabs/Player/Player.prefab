@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 7351322923036687445}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,6 +344,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 1408
+  knockbackThreshold: 0.5
   isKnockback: 0
 --- !u!114 &3509366791096844497
 MonoBehaviour:
