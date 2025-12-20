@@ -21,7 +21,6 @@ public class FirstWarp : MonoBehaviour
 
     [Header("Camera Shake Settings")]
     [SerializeField] private CinemachineCamera cinemachineCamera;
-    [SerializeField] private float shakeIntensity = 2f;
     [SerializeField] private float shakeDuration = 0.5f;
 
     [Header("UI Settings")]
