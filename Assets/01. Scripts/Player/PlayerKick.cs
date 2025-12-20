@@ -23,6 +23,7 @@ public class PlayerKick : MonoBehaviour
     private Animator animator;
     private bool isDragging = false;
     private Vector3 kickDirection;
+    private GhostTrail ghostTrail;
 
     [Header("Audio")]
     public AudioSource audioSource;
@@ -37,6 +38,7 @@ public class PlayerKick : MonoBehaviour
         cam = Camera.main;
         playerController = GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
+        ghostTrail = GetComponent<GhostTrail>();
         
         if (arrowIndicator != null)
         {
@@ -135,6 +137,9 @@ public class PlayerKick : MonoBehaviour
 
             rb.linearVelocity = Vector2.zero;
             rb.linearVelocity = -kickDirection * recoilForce;
+            
+            ghostTrail.StartTrail();
+            
             audioSource.PlayOneShot(hitKickClip);
             audioSource.volume = hitKickSensity;
         }

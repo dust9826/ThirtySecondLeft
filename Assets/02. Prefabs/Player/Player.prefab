@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 1183474307061608008}
   - component: {fileID: 2451065974513748844}
   - component: {fileID: 1131564475018737525}
+  - component: {fileID: -2105332713737780371}
   - component: {fileID: 3509366791096844497}
   - component: {fileID: 7351322923036687445}
   - component: {fileID: 4194691974363649664}
@@ -228,7 +229,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8199880427810087746, guid: 3f231784247694d43945e437a2f6f35b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -352,6 +353,23 @@ MonoBehaviour:
     m_Bits: 1408
   knockbackThreshold: 0.5
   isKnockback: 0
+--- !u!114 &-2105332713737780371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5317247847337036608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9350a8f0c17d7440920a90e19fd5522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhostTrail
+  _targetRenderer: {fileID: 7862043834004207582}
+  _ghostInterval: 0.05
+  _ghostDuration: 0.3
+  _ghostColor: {r: 0, g: 0.5676284, b: 1, a: 0.5}
+  _ghostMaterial: {fileID: 2100000, guid: afa2d33d0b9deae4d969bfd8a14ba2a6, type: 2}
 --- !u!114 &3509366791096844497
 MonoBehaviour:
   m_ObjectHideFlags: 0
