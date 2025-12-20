@@ -119,8 +119,8 @@ public class Enemy : MonoBehaviour
         // 2. 공격 애니메이션 시작 (여기서 딱 한 번만 호출)
         animator.SetTrigger("IsAttack");
 
-        // 3. 선딜레이: 애니메이션에서 무기를 휘두르는 타이밍까지 대기 (예: 0.3초)
-        yield return new WaitForSeconds(0.3f); 
+        // 3. 선딜레이: 애니메이션에서 무기를 휘두르는 타이밍까지 대기
+        yield return new WaitForSeconds(0.8f); 
 
         // 4. 실제 발사체 생성 함수 호출 (내부에 트리거 제거됨)
         SpawnProjectile();

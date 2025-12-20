@@ -64,4 +64,16 @@ public class PlayerController : MonoBehaviour
 
         rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Bullet"))
+        {
+            GameManager.Instance.GameOver("적에게 맞아 죽었습니다!");
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Trap"))
+        {
+            GameManager.Instance.GameOver("함정에 빠져 죽었습니다!");
+        }
+    }
 }
