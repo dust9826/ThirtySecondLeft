@@ -16,7 +16,7 @@ namespace BloodSystem
 
         [Header("Raycast Settings")]
         [Tooltip("발사할 Ray 개수 (5~15 권장)")]
-        [SerializeField] private int rayCount = 10;
+        [SerializeField] private int rayCount = 5;
 
         [Tooltip("Raycast로 생성되는 스플래터 크기")]
         [SerializeField] private float raycastSplatSize = 0.3f;
@@ -26,8 +26,8 @@ namespace BloodSystem
 
         [Header("Advanced Settings")]
         [Tooltip("Ray 최소/최대 거리")]
-        [SerializeField] private float minRayDistance = 0.1f;
-        [SerializeField] private float maxRayDistance = 2f;
+        [SerializeField] private float minRayDistance = 2f;
+        [SerializeField] private float maxRayDistance = 4f;
 
         /// <summary>
         /// 피 효과를 발생시킵니다
@@ -41,7 +41,7 @@ namespace BloodSystem
                 Debug.LogWarning("BloodEmitter: BloodManager 인스턴스가 없습니다!");
                 return;
             }
-
+            contactPoint -= impactForce * 0.02f;
             // 1. 즉각 스플래터 (충돌 지점에 큰 피 자국)
             EmitImmediateSplat(contactPoint);
 

@@ -12,15 +12,19 @@ namespace BloodSystem
 
         [Header("Splatter Textures")]
         [Tooltip("피 스플래터 텍스처 배열. 랜덤으로 선택됩니다.")]
-        [SerializeField] private Texture2D[] splatTextures;
+        [SerializeField] private GameObject[] splatPrefabs;
 
-        [Header("Shaders")]
-        [Tooltip("SplatBlit 셰이더 (Hidden/BloodSystem/SplatBlit)")]
-        [SerializeField] private Shader splatBlitShader;
+        [SerializeField] private Transform splatParents;
 
-        private List<IBloodable> bloodables = new List<IBloodable>();
-        private Material splatBlitMaterial;
+        [SerializeField] Color bloodColorMin = Color.red;
+        [SerializeField] Color bloodColorMax = Color.red;
 
+        [Header("Object Pooling")]
+        [Tooltip("최대 스플래터 개수. 이 수를 초과하면 가장 오래된 스플래터를 재활용합니다.")]
+        [SerializeField] private int maxSplatCount = 100;
+
+        private Queue<GameObject> splatPool = new Queue<GameObject>();
+        
         private void Awake()
         {
             // 싱글톤 설정
@@ -32,9 +36,6 @@ namespace BloodSystem
 
             Instance = this;
             DontDestroyOnLoad(gameObject);
-
-            // Blit 머티리얼 생성
-            InitializeSplatBlitMaterial();
         }
 
         private void OnDestroy()
@@ -43,49 +44,8 @@ namespace BloodSystem
             {
                 Instance = null;
             }
-
-            // 머티리얼 정리
-            if (splatBlitMaterial != null)
-            {
-                Destroy(splatBlitMaterial);
-            }
         }
-
-        private void InitializeSplatBlitMaterial()
-        {
-            if (splatBlitShader == null)
-            {
-                Debug.LogError("BloodManager: SplatBlit Shader가 할당되지 않았습니다!");
-                return;
-            }
-
-            splatBlitMaterial = new Material(splatBlitShader);
-            splatBlitMaterial.hideFlags = HideFlags.HideAndDontSave;
-        }
-
-        #region IBloodable 등록/해제
-
-        /// <summary>
-        /// IBloodable 오브젝트를 등록합니다
-        /// </summary>
-        public void RegisterBloodable(IBloodable bloodable)
-        {
-            if (!bloodables.Contains(bloodable))
-            {
-                bloodables.Add(bloodable);
-            }
-        }
-
-        /// <summary>
-        /// IBloodable 오브젝트를 해제합니다
-        /// </summary>
-        public void UnregisterBloodable(IBloodable bloodable)
-        {
-            bloodables.Remove(bloodable);
-        }
-
-        #endregion
-
+        
         #region 피 추가
 
         /// <summary>
@@ -97,12 +57,6 @@ namespace BloodSystem
         /// <param name="splatIndex">스플래터 텍스처 인덱스. -1이면 랜덤</param>
         public void AddBloodAtPoint(Vector2 worldPos, float size, float rotation = -1f, int splatIndex = -1)
         {
-            if (splatTextures == null || splatTextures.Length == 0)
-            {
-                Debug.LogWarning("BloodManager: 스플래터 텍스처가 할당되지 않았습니다!");
-                return;
-            }
-
             // 회전이 지정되지 않았으면 랜덤
             if (rotation < 0)
             {
@@ -110,105 +64,83 @@ namespace BloodSystem
             }
 
             // 스플래터 텍스처 선택
-            Texture2D splatTexture = GetSplatTexture(splatIndex);
-            if (splatTexture == null)
+            GameObject splatPrefab = GetSplatPrefabs(splatIndex);
+            if (splatPrefab == null)
             {
                 Debug.LogWarning("BloodManager: 유효한 스플래터 텍스처를 찾을 수 없습니다!");
                 return;
             }
 
-            // 해당 위치를 포함하는 모든 IBloodable에 피 추가
-            foreach (var bloodable in bloodables)
+            GameObject newSplat;
+
+            // 풀이 최대 크기에 도달했으면 가장 오래된 스플래터 재활용
+            if (splatPool.Count >= maxSplatCount)
             {
-                if (bloodable.ContainsWorldPoint(worldPos))
+                newSplat = splatPool.Dequeue();
+
+                // null 체크 (씬 전환 등으로 파괴되었을 수 있음)
+                if (newSplat == null)
                 {
-                    bloodable.AddBlood(worldPos, splatTexture, size, rotation);
+                    newSplat = Instantiate(splatPrefab, worldPos, Quaternion.Euler(0, 0, rotation), splatParents);
+                }
+                else
+                {
+                    // 위치와 회전 재설정
+                    newSplat.transform.position = worldPos;
+                    newSplat.transform.rotation = Quaternion.Euler(0, 0, rotation);
                 }
             }
-        }
-
-        #endregion
-
-        #region Blit 유틸리티
-
-        /// <summary>
-        /// RenderTexture에 스플래터를 Blit합니다
-        /// </summary>
-        /// <param name="target">대상 RenderTexture</param>
-        /// <param name="splatTexture">스플래터 텍스처</param>
-        /// <param name="uvCenter">UV 좌표 중심 (0~1)</param>
-        /// <param name="uvSize">UV 좌표 크기 (0~1)</param>
-        /// <param name="rotation">회전 (라디안)</param>
-        public void BlitSplat(RenderTexture target, Texture2D splatTexture, Vector2 uvCenter, Vector2 uvSize, float rotation)
-        {
-            if (splatBlitMaterial == null)
+            else
             {
-                Debug.LogError("BloodManager: SplatBlit Material이 초기화되지 않았습니다!");
-                return;
+                // 새로 생성
+                newSplat = Instantiate(splatPrefab, worldPos, Quaternion.Euler(0, 0, rotation), splatParents);
             }
 
-            // 셰이더 프로퍼티 설정
-            splatBlitMaterial.SetTexture("_SplatTex", splatTexture);
-            splatBlitMaterial.SetVector("_SplatRect", new Vector4(uvCenter.x, uvCenter.y, uvSize.x, uvSize.y));
-            splatBlitMaterial.SetFloat("_SplatRotation", rotation);
-
-            // 임시 RenderTexture 생성 (현재 상태 복사)
-            RenderTexture temp = RenderTexture.GetTemporary(target.width, target.height, 0, target.format);
-            Graphics.Blit(target, temp);
-
-            // 스플래터 Blit
-            Graphics.Blit(temp, target, splatBlitMaterial);
-
-            // 정리
-            RenderTexture.ReleaseTemporary(temp);
+            // 풀에 추가 (큐 끝에 추가되어 가장 최신으로 표시됨)
+            splatPool.Enqueue(newSplat);
         }
 
         #endregion
 
-        #region 텍스처 유틸리티
+        #region 프리팹 유틸리티
 
         /// <summary>
         /// 스플래터 텍스처를 가져옵니다
         /// </summary>
         /// <param name="index">인덱스. -1이면 랜덤</param>
         /// <returns>스플래터 텍스처</returns>
-        public Texture2D GetSplatTexture(int index = -1)
+        public GameObject GetSplatPrefabs(int index = -1)
         {
-            if (splatTextures == null || splatTextures.Length == 0)
+            if (splatPrefabs == null || splatPrefabs.Length == 0)
                 return null;
 
-            if (index < 0 || index >= splatTextures.Length)
+            if (index < 0 || index >= splatPrefabs.Length)
             {
                 // 랜덤 선택
-                index = Random.Range(0, splatTextures.Length);
+                index = Random.Range(0, splatPrefabs.Length);
             }
 
-            return splatTextures[index];
+            return splatPrefabs[index];
         }
 
         /// <summary>
         /// 랜덤 스플래터 텍스처를 가져옵니다
         /// </summary>
-        public Texture2D GetRandomSplatTexture()
+        public GameObject GetRandomSplatTexture()
         {
-            return GetSplatTexture(-1);
+            return GetSplatPrefabs(-1);
+        }
+        public Color RandomColorRGB(Color min, Color max, float alpha = 1f)
+        {
+            return new Color(
+                Random.Range(min.r, max.r),
+                Random.Range(min.g, max.g),
+                Random.Range(min.b, max.b),
+                alpha
+            );
         }
 
         #endregion
 
-        #region 전체 초기화
-
-        /// <summary>
-        /// 등록된 모든 IBloodable 오브젝트의 피를 제거합니다
-        /// </summary>
-        public void ClearAllBlood()
-        {
-            foreach (var bloodable in bloodables)
-            {
-                bloodable.ClearBlood();
-            }
-        }
-
-        #endregion
     }
 }

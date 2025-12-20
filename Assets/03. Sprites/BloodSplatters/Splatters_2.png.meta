@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: 75ef724202282004d883ec6f7a0be449
+guid: 3bea3d28565ca954487f63bedbf07e28
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1825816232429261907
-    second: Splatter_03_0
+      213: 4047150448954115105
+    second: Splatters_2_0
+  - first:
+      213: -294679597445670510
+    second: Splatters_2_1
+  - first:
+      213: 2256494869922817966
+    second: Splatters_2_2
+  - first:
+      213: -7021469987251526962
+    second: Splatters_2_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
-    sRGBTexture: 0
+    sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -55,9 +64,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -75,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Splatter_03_0
+      name: Splatters_2_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 25
-        width: 207
-        height: 207
+        x: 35
+        y: 22
+        width: 477
+        height: 460
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dab69e86fc569a6e0800000000000000
-      internalID: -1825816232429261907
+      spriteID: 124097ef3ed5a2830800000000000000
+      internalID: 4047150448954115105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_2_1
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 476
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29912b7a77619ebf0800000000000000
+      internalID: -294679597445670510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_2_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 373
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea7ad37f02ea05f10800000000000000
+      internalID: 2256494869922817966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_2_3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec26ec87f3abe8e90800000000000000
+      internalID: -7021469987251526962
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Splatter_03_0: -1825816232429261907
+      Splatters_2_0: 4047150448954115105
+      Splatters_2_1: -294679597445670510
+      Splatters_2_2: 2256494869922817966
+      Splatters_2_3: -7021469987251526962
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
