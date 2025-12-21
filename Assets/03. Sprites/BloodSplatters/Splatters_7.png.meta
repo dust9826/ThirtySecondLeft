@@ -1,0 +1,871 @@
+fileFormatVersion: 2
+guid: ad14be584d222a0429f27c5f9790f7e0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -773937984978977393
+    second: Splatters_7_0
+  - first:
+      213: 7116456124597544277
+    second: Splatters_7_1
+  - first:
+      213: -1221944262689170423
+    second: Splatters_7_2
+  - first:
+      213: 4903133923878965358
+    second: Splatters_7_3
+  - first:
+      213: -8038085933545066394
+    second: Splatters_7_4
+  - first:
+      213: -2149893319609813063
+    second: Splatters_7_5
+  - first:
+      213: -389944626571246971
+    second: Splatters_7_6
+  - first:
+      213: -3000369406220735816
+    second: Splatters_7_7
+  - first:
+      213: 3838713181619787796
+    second: Splatters_7_8
+  - first:
+      213: -5893419394408431313
+    second: Splatters_7_9
+  - first:
+      213: 4334631102431293287
+    second: Splatters_7_10
+  - first:
+      213: -5742177590302312154
+    second: Splatters_7_11
+  - first:
+      213: 477802204826687843
+    second: Splatters_7_12
+  - first:
+      213: -1672414131139390999
+    second: Splatters_7_13
+  - first:
+      213: 6078768545308641320
+    second: Splatters_7_14
+  - first:
+      213: -2894197708916145756
+    second: Splatters_7_15
+  - first:
+      213: -5916307461813643339
+    second: Splatters_7_16
+  - first:
+      213: -8876200000718564035
+    second: Splatters_7_17
+  - first:
+      213: 1601138058381563878
+    second: Splatters_7_18
+  - first:
+      213: -5432090645872757452
+    second: Splatters_7_19
+  - first:
+      213: -8952975042035016245
+    second: Splatters_7_20
+  - first:
+      213: 8186404499092871882
+    second: Splatters_7_21
+  - first:
+      213: 6853712873319670326
+    second: Splatters_7_22
+  - first:
+      213: 6352610903912556651
+    second: Splatters_7_23
+  - first:
+      213: -8246304232816303433
+    second: Splatters_7_24
+  - first:
+      213: -5028480013889666324
+    second: Splatters_7_25
+  - first:
+      213: -2266369683793461298
+    second: Splatters_7_26
+  - first:
+      213: -4516657393695043992
+    second: Splatters_7_27
+  - first:
+      213: -2231685691166138986
+    second: Splatters_7_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Splatters_7_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 67
+        width: 509
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d752fc08b6245f0800000000000000
+      internalID: -773937984978977393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_1
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 425
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5552a46042bb2c260800000000000000
+      internalID: 7116456124597544277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_2
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 426
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90cd51fca28ca0fe0800000000000000
+      internalID: -1221944262689170423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_3
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 431
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6019fa635e6b0440800000000000000
+      internalID: 4903133923878965358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_4
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 428
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6607bf85e6bf27090800000000000000
+      internalID: -8038085933545066394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_5
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 433
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b7fbab9a6b0a22e0800000000000000
+      internalID: -2149893319609813063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_6
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 408
+        width: 36
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582062b9d63a69af0800000000000000
+      internalID: -389944626571246971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_7
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 415
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ba6343fbeb8c56d0800000000000000
+      internalID: -3000369406220735816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_8
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 409
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4189e01ec49d54530800000000000000
+      internalID: 3838713181619787796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_9
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 397
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2143e3194e563ea0800000000000000
+      internalID: -5893419394408431313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_10
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 374
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76fe6c49504b72c30800000000000000
+      internalID: 4334631102431293287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_11
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 389
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62972dca7efaf40b0800000000000000
+      internalID: -5742177590302312154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_12
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 376
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 369d793e29e71a600800000000000000
+      internalID: 477802204826687843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_13
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 360
+        width: 23
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e1d71465346ac8e0800000000000000
+      internalID: -1672414131139390999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_14
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 363
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82880f609cf1c5450800000000000000
+      internalID: 6078768545308641320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_15
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 324
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a1cd42948eb5d7d0800000000000000
+      internalID: -2894197708916145756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_16
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 338
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7da9c95bd05eda0800000000000000
+      internalID: -5916307461813643339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_17
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 344
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3519d1a02761d480800000000000000
+      internalID: -8876200000718564035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_18
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 331
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e71136b492683610800000000000000
+      internalID: 1601138058381563878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_19
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 318
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 435380986565d94b0800000000000000
+      internalID: -5432090645872757452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_20
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 295
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcd909852a4a0c380800000000000000
+      internalID: -8952975042035016245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_21
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 261
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca171cb483fb9170800000000000000
+      internalID: 8186404499092871882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_22
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 254
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 632adb6bb874d1f50800000000000000
+      internalID: 6853712873319670326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 201
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b682bf3a5f1092850800000000000000
+      internalID: 6352610903912556651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_24
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 130
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b22f25bdfd3f8d80800000000000000
+      internalID: -8246304232816303433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_25
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 113
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce284f3c110473ab0800000000000000
+      internalID: -5028480013889666324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_26
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 115
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecfb6c3c7cc3c80e0800000000000000
+      internalID: -2266369683793461298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_27
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 99
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86e4aacd70c9151c0800000000000000
+      internalID: -4516657393695043992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splatters_7_28
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 84
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69d58b710b57701e0800000000000000
+      internalID: -2231685691166138986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Splatters_7_0: -773937984978977393
+      Splatters_7_1: 7116456124597544277
+      Splatters_7_10: 4334631102431293287
+      Splatters_7_11: -5742177590302312154
+      Splatters_7_12: 477802204826687843
+      Splatters_7_13: -1672414131139390999
+      Splatters_7_14: 6078768545308641320
+      Splatters_7_15: -2894197708916145756
+      Splatters_7_16: -5916307461813643339
+      Splatters_7_17: -8876200000718564035
+      Splatters_7_18: 1601138058381563878
+      Splatters_7_19: -5432090645872757452
+      Splatters_7_2: -1221944262689170423
+      Splatters_7_20: -8952975042035016245
+      Splatters_7_21: 8186404499092871882
+      Splatters_7_22: 6853712873319670326
+      Splatters_7_23: 6352610903912556651
+      Splatters_7_24: -8246304232816303433
+      Splatters_7_25: -5028480013889666324
+      Splatters_7_26: -2266369683793461298
+      Splatters_7_27: -4516657393695043992
+      Splatters_7_28: -2231685691166138986
+      Splatters_7_3: 4903133923878965358
+      Splatters_7_4: -8038085933545066394
+      Splatters_7_5: -2149893319609813063
+      Splatters_7_6: -389944626571246971
+      Splatters_7_7: -3000369406220735816
+      Splatters_7_8: 3838713181619787796
+      Splatters_7_9: -5893419394408431313
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

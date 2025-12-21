@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9012989718165155418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6351498516556587235}
+  - component: {fileID: 2276716828469834227}
+  - component: {fileID: 5964303842797606895}
+  m_Layer: 0
+  m_Name: BloodManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6351498516556587235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012989718165155418}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.41565, y: -2.03764, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2276716828469834227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012989718165155418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6256e511dab7a0f458fb3d92c2074021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodSystem.BloodManager
+  splatPrefabs:
+  - {fileID: 3355176403115942378, guid: ebb815d900b56fd439ecd44ac9acd672, type: 3}
+  - {fileID: 2110125582095308669, guid: 1e991cc47dcdc624aad9e7b10b93b4d2, type: 3}
+  - {fileID: 7716174562736985590, guid: 8de21a3427cbf4c4680112b6c4713406, type: 3}
+  - {fileID: 7472697752316912469, guid: eded53633bf697341aa9585e455ecfb1, type: 3}
+  - {fileID: 7842190788515281666, guid: 02d3fef6bd8f0b541b40d4b1d55469a5, type: 3}
+  - {fileID: 4102029799433922255, guid: 0bfa64f14d0eb30409ddffa6166b9ba9, type: 3}
+  splatParents: {fileID: 6351498516556587235}
+  bloodColorMin: {r: 1, g: 0, b: 0, a: 1}
+  bloodColorMax: {r: 1, g: 0, b: 0, a: 1}
+  maxSplatCount: 200
+--- !u!114 &5964303842797606895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012989718165155418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc151a8c13da40a44bb74f54f84e9823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodSystem.GoreSpawner
+  gorePiecePrefabs:
+  - {fileID: 8628697529619461155, guid: 3916c9485f4087a4785ac4f7b0d8a9dc, type: 3}
+  - {fileID: 8628697529619461155, guid: ff574b71c3f5826489b7c7a0e79f59f9, type: 3}
+  - {fileID: 8628697529619461155, guid: 6809105816690ab42ac9a70a94d9dc76, type: 3}
+  bloodBurstPrefab: {fileID: 8016841967455972420, guid: 859af7d65d7b22049a1729c73fa8d57d, type: 3}
+  minPieces: 2
+  maxPieces: 3
+  spawnOffset: 0.3
+  forceRange: {x: 0.02, y: 0.05}
+  torqueRange: {x: -60, y: 60}
+  spreadAngle: 120
+  mainSplatterCount: 2
+  mainSplatterSize: {x: 1.5, y: 2.5}
+  goreParent: {fileID: 6351498516556587235}

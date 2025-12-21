@@ -1,0 +1,79 @@
+using UnityEngine;
+using UnityEngine.InputSystem; // 반드시 추가
+
+public class PlayerController : MonoBehaviour
+{
+    [Header("Movement")]
+    public float moveSpeed = 8f;
+    public float jumpForce = 12f;
+
+    [Header("Ground Check")]
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
+    public LayerMask groundLayer;
+
+    [Header("Knockback")]
+    public float knockbackThreshold = 0.5f;
+
+    private Animator animator;
+    private Rigidbody2D rb;
+    private float moveX;
+    private bool isGrounded;
+
+    // 넉백 상태를 제어하기 위한 변수
+    [HideInInspector] public bool isKnockback = false;
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+    }
+    
+    void OnMove(InputValue value)
+    {
+        Vector2 inputVector = value.Get<Vector2>();
+        moveX = inputVector.x;
+        
+        bool isMoving = Mathf.Abs(moveX) > 0f;
+        animator.SetBool("isRun", isMoving);
+    }
+    
+    void OnJump(InputValue value)
+    {
+        if (value.isPressed && isGrounded)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
+    }
+
+    void Update()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        // 속도가 임계값 이하로 떨어지면 넉백 해제
+        if (isKnockback && rb.linearVelocity.magnitude <= knockbackThreshold)
+        {
+            isKnockback = false;
+        }
+    }
+
+    void FixedUpdate()
+    {
+        // 넉백 상태일 때는 이동 입력 무시
+        if (isKnockback) return;
+
+        rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Bullet"))
+        {
+            GameManager.Instance.GameOver("적에게 맞아 죽었습니다!");
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Trap"))
+        {
+            GameManager.Instance.GameOver("함정에 빠져 죽었습니다!");
+        }
+    }
+}

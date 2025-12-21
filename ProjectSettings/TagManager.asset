@@ -2,8 +2,9 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -11,16 +12,16 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Platform
+  - Object
+  - Enemy
+  - Ground
+  - Wall
+  - Trap
+  - Gore
+  - Bullet
+  - Drone
   - 
   - 
   - 
@@ -38,6 +39,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 759940141
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: FG
+    uniqueID: 2625918251
+    locked: 0
+  m_RenderingLayers:
+  - Default
