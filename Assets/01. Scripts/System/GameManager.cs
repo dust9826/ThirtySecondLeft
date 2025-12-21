@@ -14,10 +14,15 @@ public class GameManager : MonoBehaviour
     [Header("UI References")]
     public TextMeshProUGUI causeOfDeath;
     public GameObject gameoverPanel; // 패널을 켜고 끄기 위해 GameObject로 변경
-    public GameObject FirstPanel; 
+    public GameObject FirstPanel;
 
     private bool isGameOver = false; // 게임 오버 상태 체크
     private bool isFirst = false; //시작 연출 시청 여부
+
+    // 타이머 관련 변수
+    private float elapsedTime = 0f;
+    private bool isTimerRunning = false;
+    public static float ClearTime { get; private set; } // 클리어 타임 저장용
 
     private void Awake()
     {
@@ -48,6 +53,12 @@ public class GameManager : MonoBehaviour
         {
             StartGameSequence();
         }
+
+        // 타이머 업데이트
+        if (isTimerRunning)
+        {
+            elapsedTime += Time.deltaTime;
+        }
     }
 
     private void StartGameSequence()
@@ -55,10 +66,27 @@ public class GameManager : MonoBehaviour
         if(FirstPanel && firstcinemachine != null){
         isFirst = true;
         if (FirstPanel != null) FirstPanel.SetActive(false);
-    
+
         player.moveSpeed = 8f;
         if (firstcinemachine != null) firstcinemachine.gameObject.SetActive(true);
+
+        // 타이머 시작
+        elapsedTime = 0f;
+        isTimerRunning = true;
         }
+    }
+
+    // 타이머 정지 및 클리어 타임 저장
+    public void StopTimer()
+    {
+        isTimerRunning = false;
+        ClearTime = elapsedTime;
+    }
+
+    // 현재 경과 시간 반환
+    public float GetElapsedTime()
+    {
+        return elapsedTime;
     }
 
     // 게임 오버 시 호출할 함수
