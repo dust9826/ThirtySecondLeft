@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BloodSystem.BloodManager
   splatPrefabs:
-  - {fileID: 2110125582095308669, guid: 1e991cc47dcdc624aad9e7b10b93b4d2, type: 3}
   - {fileID: 3355176403115942378, guid: ebb815d900b56fd439ecd44ac9acd672, type: 3}
+  - {fileID: 2110125582095308669, guid: 1e991cc47dcdc624aad9e7b10b93b4d2, type: 3}
   - {fileID: 7716174562736985590, guid: 8de21a3427cbf4c4680112b6c4713406, type: 3}
   - {fileID: 7472697752316912469, guid: eded53633bf697341aa9585e455ecfb1, type: 3}
   - {fileID: 7842190788515281666, guid: 02d3fef6bd8f0b541b40d4b1d55469a5, type: 3}
@@ -69,7 +69,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BloodSystem.GoreSpawner
   gorePiecePrefabs:
-  - {fileID: 8628697529619461155, guid: 2d73fa3c4dbdc51498947f7c8d5f6d3d, type: 3}
+  - {fileID: 8628697529619461155, guid: 3916c9485f4087a4785ac4f7b0d8a9dc, type: 3}
+  - {fileID: 8628697529619461155, guid: ff574b71c3f5826489b7c7a0e79f59f9, type: 3}
+  - {fileID: 8628697529619461155, guid: 6809105816690ab42ac9a70a94d9dc76, type: 3}
   bloodBurstPrefab: {fileID: 8016841967455972420, guid: 859af7d65d7b22049a1729c73fa8d57d, type: 3}
   minPieces: 2
   maxPieces: 3

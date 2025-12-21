@@ -133,7 +133,9 @@ namespace BloodSystem
             for (int i = 0; i < pieceCount; i++)
             {
                 // 랜덤 프리팹 선택
-                GameObject prefab = gorePiecePrefabs[Random.Range(0, gorePiecePrefabs.Length)];
+                GameObject prefab = gorePiecePrefabs[Random.Range(1, gorePiecePrefabs.Length)];
+                if(i == 0)
+                    prefab = gorePiecePrefabs[0];
                 if (prefab == null)
                     continue;
 
