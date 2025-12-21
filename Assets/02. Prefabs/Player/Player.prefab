@@ -325,7 +325,7 @@ MonoBehaviour:
   kickRadius: 1.5
   kickableLayer:
     serializedVersion: 2
-    m_Bits: 20352
+    m_Bits: 53120
   arrowOffsetDistance: 2
   audioSource: {fileID: 4194691974363649664}
   airKickClip: {fileID: 8300000, guid: 26db9b0ff0818f4488fe23b0b71ebb73, type: 3}

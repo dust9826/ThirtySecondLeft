@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5360538161952443329}
   - component: {fileID: 4903133396854218559}
   - component: {fileID: 8929992573247806888}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Drone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0023300648, y: 0.0046599507}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -185,7 +185,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.46875, y: 1.46875}
+  m_Size: {x: 1.2870154, y: 0.94684637}
   m_EdgeRadius: 0
 --- !u!95 &8929992573247806888
 Animator:
