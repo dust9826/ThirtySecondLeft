@@ -30,8 +30,8 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
-        player.moveSpeed = 0f;
+        
+        if(player != null) player.moveSpeed = 0f;
     }
 
     private void Update()
@@ -52,11 +52,13 @@ public class GameManager : MonoBehaviour
 
     private void StartGameSequence()
     {
+        if(FirstPanel && firstcinemachine != null){
         isFirst = true;
         if (FirstPanel != null) FirstPanel.SetActive(false);
     
         player.moveSpeed = 8f;
         if (firstcinemachine != null) firstcinemachine.gameObject.SetActive(true);
+        }
     }
 
     // 게임 오버 시 호출할 함수
